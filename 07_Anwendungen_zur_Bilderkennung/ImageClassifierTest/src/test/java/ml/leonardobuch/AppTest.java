@@ -1,4 +1,4 @@
-package ml.leonardobuch.ImageClassifierTest;
+package ml.leonardobuch;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

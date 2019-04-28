@@ -1,4 +1,4 @@
-package ml.leonardobuch.ImageClassifierTest;
+package ml.leonardobuch;
 
 import com.sap.apibhub.sdk.client.ApiClient;
 import com.sap.apibhub.sdk.client.ApiException;
