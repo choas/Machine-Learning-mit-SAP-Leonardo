@@ -32,7 +32,7 @@ public class App {
   public static final Boolean PIXEL_IMAGE = false;
 
   /**
-   * Die main Methode.
+   * main Methode.
    * 
    * @param args Parameter
    */
