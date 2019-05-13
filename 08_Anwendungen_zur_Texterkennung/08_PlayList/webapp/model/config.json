@@ -1,0 +1,41 @@
+{
+   "users": [{
+      "name": "Julia",
+      "playlist": 
+         "Madonna Jackson Jackson"
+   }, {
+      "name": "Kevin",
+      "playlist": 
+         "Snap Madonna U2 Jackson Jackson Madonna U2"
+   }, {
+      "name": "Gabi",
+      "playlist": 
+         "Madonna U2 U2 Jackson U2"
+   }, {
+      "name": "Madelein",
+      "playlist": 
+         "U2 U2 Snap U2 Jackson U2"
+   }, {
+      "name": "Thomas",
+      "playlist": 
+         "Madonna Jackson Snap U2 Nirvana Snap Jackson"
+   }, {
+      "name": "Verena",
+      "playlist": 
+         "Madonna U2 Snap Snap Jackson Jackson"
+   }],
+   "genres": ["Pop", "Dance", "Alternative", "Rock"],
+   "mappingSongToGenre": {
+      "madonna": "Pop",
+      "jackson": "Pop",
+      "snap": "Dance",
+      "u2": "Rock",
+      "nirvana": "Alternative"
+   },
+   "mappingGenreToSong": {
+      "Pop": "Jackson",
+      "Dance": "Snap",
+      "Rock": "U2",
+      "Alternative": "Nirvana"
+   }
+}

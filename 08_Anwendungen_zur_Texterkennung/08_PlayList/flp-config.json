@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "playlist.Playlist.Playlist",
+        "description": "Playlist App",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#Playlist-Display",
+        "navigationComponentName": "playlist.Playlist",
+        "intentSemanticObject": "Playlist",
+        "intentAction": "Display",
+        "html5ApplicationName": "playlist",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "68012975-efaf-4050-a805-15fae26b6c3f"
+        ],
+        "contentPackages": [
+            "4a09663b-9e23-4dd8-a7b5-38581b037014"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Playlist",
+        "subtitle": "nice version",
+        "searchKeywords": "Playlist,nice version",
+        "displayIconUrl": "sap-icon://play",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

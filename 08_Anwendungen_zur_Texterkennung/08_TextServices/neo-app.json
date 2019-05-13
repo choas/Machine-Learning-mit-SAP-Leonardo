@@ -1,0 +1,53 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources",
+        "version": "1.61.1"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources",
+        "version": "1.61.1"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/ml",
+      "target": {
+        "type": "destination",
+        "name": "leonardo-ml"
+      },
+      "description": "SAP Leonardo ML"
+    },
+    {
+      "path": "/mlftrial-language-detection",
+      "target": {
+        "type": "destination",
+        "name": "mlftrial-language-detection"
+      },
+      "description": "SAP Leonardo ML Trial Language Detection"
+    },
+    {
+      "path": "/mlftrial-text-classifier",
+      "target": {
+        "type": "destination",
+        "name": "mlftrial-text-classifier"
+      },
+      "description": "SAP Leonardo ML Trial Text Classifier"
+    }
+  ],
+  "sendWelcomeFileRedirect": true,
+  "headerWhiteList": [
+    "APIKey"
+  ]
+}
