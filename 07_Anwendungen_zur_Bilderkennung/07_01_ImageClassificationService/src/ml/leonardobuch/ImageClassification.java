@@ -26,7 +26,7 @@ public class ImageClassification {
    */
   public static void main(String[] args) {
 
-    DataOutputStream dataOut = null;
+	DataOutputStream dataOut = null;
     BufferedReader in = null;
 
     try {

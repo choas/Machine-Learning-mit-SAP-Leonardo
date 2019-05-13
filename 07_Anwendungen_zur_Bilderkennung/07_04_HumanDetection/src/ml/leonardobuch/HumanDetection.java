@@ -25,7 +25,7 @@ public class HumanDetection {
    */
   public static void main(String[] args) {
 
-    String fileName = Settings.PATH + "african-american-3548081_640.jpg";
+    String fileName = Settings.PATH + "people/african-american-3548081_640.jpg";
 
     DataOutputStream dataOut = null;
     BufferedReader in = null;
@@ -74,7 +74,7 @@ public class HumanDetection {
       frame.pack();
       frame.setVisible(true);
 
-      ImageIO.write(image, "png", new File(Settings.PATH + "human_out.png"));
+      ImageIO.write(image, "png", new File(Settings.PATH + "people/out/human.png"));
 
     } catch (Exception e) {
       e.printStackTrace();

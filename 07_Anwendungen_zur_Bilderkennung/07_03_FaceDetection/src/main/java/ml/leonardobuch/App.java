@@ -38,7 +38,7 @@ public class App {
    */
   public static void main(String[] args) throws IOException, ApiException {
 
-    final String fileName = Settings.PATH + "man-3365368_640.jpg";
+    final String fileName = Settings.PATH + "/people/man-3365368_640.jpg";
 
     ApiClient apiClient = Configuration.getDefaultApiClient();
     apiClient.addDefaultHeader("APIKey", Settings.API_KEY);
@@ -74,7 +74,7 @@ public class App {
     frame.pack();
     frame.setVisible(true);
 
-    ImageIO.write(image, "png", new File(Settings.PATH + "face_out.png"));
+    ImageIO.write(image, "png", new File(Settings.PATH + "/people/out/face.png"));
   }
 
   private static void box(BufferedImage image, Graphics2D graph, BoundaryBox boundaryBox) {

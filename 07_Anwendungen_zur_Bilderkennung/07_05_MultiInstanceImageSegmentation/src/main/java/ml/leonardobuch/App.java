@@ -24,7 +24,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- * Face Detection Application.
+ * Multi-Instance Image Segmentation.
  *
  */
 public class App {
