@@ -13,7 +13,7 @@ sap.ui.define([
 		}
 	}
 
-	return Controller.extend("text.TextServices.controller.Language", {
+	return Controller.extend("mltext.MLTextServices.controller.Main", {
 
 		API_KEY: "", // API Key einfügen
 
@@ -223,6 +223,5 @@ sap.ui.define([
 			//sending request
 			xhr.send(data);
 		}
-
 	});
 });

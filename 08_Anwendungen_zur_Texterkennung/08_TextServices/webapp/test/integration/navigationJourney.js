@@ -1,38 +1,21 @@
-/*global QUnit*/
-sap.ui.define([
-	"sap/ui/test/opaQunit",
-	"text/TextServices/test/integration/pages/Language"
-], function (opaTest) {
-	"use strict";
+	/*global QUnit*/
 
-	//This module tests that the app is loaded. Add any other relevant tests to check the UI of the app.
-	//For more information on OPA, see https://sapui5.hana.ondemand.com/#/topic/2696ab50faad458f9b4027ec2f9b884d
-	QUnit.module("Navigation Journey");
+	sap.ui.define([
+		"sap/ui/test/opaQunit",
+		"./pages/Main"
+	], function (opaTest) {
+		"use strict";
 
-	opaTest("Should see the initial page of the app", function (Given, When, Then) {
-		// Arrangements
-		Given.iStartTheApp();
+		QUnit.module("Navigation Journey");
 
-		//Actions
-		When.onTheAppPage.iLookAtTheScreen();
-		// Assertions
-		Then.onTheAppPage.iShouldSeeTheApp();
+		opaTest("Should see the initial page of the app", function (Given, When, Then) {
+			// Arrangements
+			Given.iStartMyApp();
 
-		Then.iTeardownMyAppFrame();
+			// Assertions
+			Then.onTheAppPage.iShouldSeeTheApp();
 
+			//Cleanup
+			Then.iTeardownMyApp();
+		});
 	});
-
-	//This is an example of an OPA Journey that needs to be fixed 
-	opaTest("Should check additional UI elements", function (Given, When, Then) {
-		// Arrangements
-		Given.iStartTheApp();
-
-		//Actions
-		When.onTheAppPage.iDoMyAction();
-		// Assertions
-		Then.onTheAppPage.iDoMyAssertion();
-
-		Then.iTeardownMyAppFrame();
-
-	});
-});

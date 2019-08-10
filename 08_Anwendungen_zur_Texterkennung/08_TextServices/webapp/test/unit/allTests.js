@@ -1,5 +1,5 @@
 sap.ui.define([
-	"text/TextServices/test/unit/controller/Language.controller"
+	"mltext/MLTextServices/test/unit/controller/Main.controller"
 ], function () {
 	"use strict";
 });

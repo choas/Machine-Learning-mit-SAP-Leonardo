@@ -1,11 +1,11 @@
 {
-	"_version": "1.8.0",
+	"_version": "1.12.0",
 	"sap.app": {
-		"id": "text.TextServices2",
+		"id": "mltext.MLTextServices",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
-			"version": "1.1.0"
+			"version": "1.0.0"
 		},
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
@@ -14,6 +14,7 @@
 			"version": "1.40.12"
 		}
 	},
+
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -28,23 +29,23 @@
 			"desktop": true,
 			"tablet": true,
 			"phone": true
-		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-		]
+		}
 	},
+
 	"sap.ui5": {
+		"flexEnabled": false,
 		"rootView": {
-			"viewName": "text.TextServices.view.Language",
-			"type": "XML"
+			"viewName": "mltext.MLTextServices.view.Main",
+			"type": "XML",
+			"async": true,
+			"id": "Main"
 		},
 		"dependencies": {
-			"minUI5Version": "1.30.0",
+			"minUI5Version": "1.60.1",
 			"libs": {
-				"sap.m": {},
+				"sap.ui.layout": {},
 				"sap.ui.core": {},
-				"sap.ui.layout": {}
+				"sap.m": {}
 			}
 		},
 		"contentDensities": {
@@ -55,49 +56,39 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "text.TextServices.i18n.i18n"
+					"bundleName": "mltext.MLTextServices.i18n.i18n"
 				}
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			],
-			"js": []
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"async": true,
-				"viewPath": "text.TextServices.view",
+				"viewPath": "mltext.MLTextServices.view",
 				"controlAggregation": "pages",
-				"controlId": "idAppControl",
+				"controlId": "app",
 				"clearControlAggregation": false
 			},
-			"routes": [
-				{
-					"name": "RouteLanguage",
-					"pattern": "RouteLanguage",
-					"target": [
-						"TargetLanguage"
-					]
-				}
-			],
+			"routes": [{
+				"name": "RouteMain",
+				"pattern": "RouteMain",
+				"target": ["TargetMain"]
+			}],
 			"targets": {
-				"TargetLanguage": {
+				"TargetMain": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
-					"viewName": "Language"
+					"viewId": "Main",
+					"viewName": "Main"
 				}
 			}
 		}
-	},
-	"sap.platform.hcp": {
-		"uri": "webapp",
-		"_version": "1.1.0"
 	}
 }

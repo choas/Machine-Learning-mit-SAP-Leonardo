@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"text/TextServices/model/models"
+	"mltext/MLTextServices/model/models"
 ], function (UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("text.TextServices.Component", {
+	return UIComponent.extend("mltext.MLTextServices.Component", {
 
 		metadata: {
 			manifest: "json"
