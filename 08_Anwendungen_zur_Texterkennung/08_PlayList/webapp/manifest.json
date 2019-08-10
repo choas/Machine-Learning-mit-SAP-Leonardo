@@ -1,5 +1,5 @@
 {
-	"_version": "1.8.0",
+	"_version": "1.12.0",
 	"sap.app": {
 		"id": "playlist.Playlist",
 		"type": "application",
@@ -28,23 +28,22 @@
 			"desktop": true,
 			"tablet": true,
 			"phone": true
-		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-		]
+		}
 	},
 	"sap.ui5": {
+		"flexEnabled": false,
 		"rootView": {
 			"viewName": "playlist.Playlist.view.Main",
-			"type": "XML"
+			"type": "XML",
+			"async": true,
+			"id": "Main"
 		},
 		"dependencies": {
 			"minUI5Version": "1.60.1",
 			"libs": {
-				"sap.ui.layout": {},
+				"sap.m": {},
 				"sap.ui.core": {},
-				"sap.m": {}
+				"sap.ui.layout": {}
 			}
 		},
 		"contentDensities": {
@@ -79,7 +78,7 @@
 				"async": true,
 				"viewPath": "playlist.Playlist.view",
 				"controlAggregation": "pages",
-				"controlId": "idAppControl",
+				"controlId": "app",
 				"clearControlAggregation": false
 			},
 			"routes": [
@@ -96,13 +95,10 @@
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
+					"viewId": "Main",
 					"viewName": "Main"
 				}
 			}
 		}
-	},
-	"sap.platform.hcp": {
-		"uri": "webapp",
-		"_version": "1.1.0"
 	}
 }

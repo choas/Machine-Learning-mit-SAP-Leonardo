@@ -5,8 +5,8 @@ sap.ui.define([
 
 	return Opa5.extend("playlist.Playlist.test.integration.arrangements.Startup", {
 
-		iStartMyApp: function (oOptions) {
-			oOptions = oOptions || {};
+		iStartMyApp: function (oOptionsParameter) {
+			var oOptions = oOptionsParameter || {};
 
 			// start the app with a minimal delay to make tests fast but still async to discover basic timing issues
 			oOptions.delay = oOptions.delay || 50;

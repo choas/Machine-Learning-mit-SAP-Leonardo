@@ -121,6 +121,18 @@ sap.ui.define([
 					topicDetection(view, 4);
 				});
 
+				// Abweichung zum Buch
+				// In einer neueren SAPUI5 Version wird das Modell 
+				// bereits geladen und die Daten stehen zur Verfügung.
+				// In diesem Fall wird der obere Code in der
+				// attachRequestCompleted nicht ausgeführt, da kein
+				// entsprechendes Event ausgelöst wird.
+				// Um dies zu erreichen wird die fireRequestCompleted
+				// Methode aufgerufen, die das 'requestCompleted'
+				// Event auslöst.
+				if (model.getProperty("/users").length > 0) {
+					model.fireRequestCompleted();
+				}
 			},
 			refreshTopics: function (event) {
 				// TODO refreshTopic

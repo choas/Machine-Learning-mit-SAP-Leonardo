@@ -5,98 +5,73 @@
 	displayBlock="true" xmlns="sap.m"
 	xmlns:sap.ui.layout="sap.ui.layout"
 	xmlns:core="sap.ui.core">
-	<App id="idAppControl">
-		<pages>
-			<Page title="{i18n>appTitle}">
-				<content>
-					
-<sap.ui.layout:Grid id="gridHead" 
-   defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
-   <sap.ui.layout:content>
-      <Text text="Name"/>
-      <Text text="Playlist"/>
-      <HBox width="100%">
-         <!-- TODO Topic Select, Refresh, Check -->
-<items>
-   <Select 
-      id="topicNum"
-      maxWidth="200%" 
-      selectedKey="topic-4"
-      change="refreshTopics">
-      <items>
-         <core:Item key="topic-6" text="6 Topics"/>
-         <core:Item key="topic-5" text="5 Topics"/>
-         <core:Item key="topic-4" text="4 Topics"/>
-         <core:Item key="topic-3" text="3 Topics"/>
-         <core:Item key="topic-2" text="2 Topics"/>
-         <core:Item key="topic-1" text="1 Topic"/>
-      </items>
-   </Select>
-   <Button 
-      icon="sap-icon://refresh"
-      press="refreshTopics"
-      tooltip="Refresh"/>
-   <CheckBox
-      text="leere Topic-Einträge anzeigen" 
-      selected="false" 
-      id="check" 
-      select="refreshTopics"/>
-</items>
-</HBox>
-   </sap.ui.layout:content>
-</sap.ui.layout:Grid>
-
-
-<sap.ui.layout:Grid id="grid0"
-   defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
-   <sap.ui.layout:content>
-      <Text id="name0"/>
-      <TextArea id="playlist0" 
-         rows="3" cols="50" width="120pt"/>
-   </sap.ui.layout:content>
-</sap.ui.layout:Grid>
-<sap.ui.layout:Grid id="grid1"
-   defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
-   <sap.ui.layout:content>
-      <Text id="name1"/>
-      <TextArea id="playlist1"
-         rows="3" cols="50" width="120pt"/>
-   </sap.ui.layout:content>
-</sap.ui.layout:Grid>
-<sap.ui.layout:Grid id="grid2"
-   defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
-   <sap.ui.layout:content>
-      <Text id="name2"/>
-      <TextArea id="playlist2"
-         rows="3" cols="50" width="120pt"/>
-   </sap.ui.layout:content>
-</sap.ui.layout:Grid>
-<sap.ui.layout:Grid id="grid3"
-   defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
-   <sap.ui.layout:content>
-      <Text id="name3"/>
-      <TextArea id="playlist3"
-         rows="3" cols="50" width="120pt"/>
-   </sap.ui.layout:content>
-</sap.ui.layout:Grid>
-<sap.ui.layout:Grid id="grid4"
-   defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
-   <sap.ui.layout:content>
-      <Text id="name4"/>
-      <TextArea id="playlist4"
-         rows="3" cols="50" width="120pt"/>
-   </sap.ui.layout:content>
-</sap.ui.layout:Grid>
-<sap.ui.layout:Grid id="grid5"
-   defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
-   <sap.ui.layout:content>
-      <Text id="name5"/>
-      <TextArea id="playlist5"
-         rows="3" cols="50" width="120pt"/>
-   </sap.ui.layout:content>
-</sap.ui.layout:Grid>
-				</content>
-			</Page>
-		</pages>
-	</App>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page title="{i18n>appTitle}">
+					<content>
+						<sap.ui.layout:Grid id="gridHead" defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
+							<sap.ui.layout:content>
+								<Text text="Name"/>
+								<Text text="Playlist"/>
+								<HBox width="100%">
+									<!-- TODO Topic Select, Refresh, Check -->
+									<items>
+										<Select id="topicNum" maxWidth="200%" selectedKey="topic-4" change="refreshTopics">
+											<items>
+												<core:Item key="topic-6" text="6 Topics"/>
+												<core:Item key="topic-5" text="5 Topics"/>
+												<core:Item key="topic-4" text="4 Topics"/>
+												<core:Item key="topic-3" text="3 Topics"/>
+												<core:Item key="topic-2" text="2 Topics"/>
+												<core:Item key="topic-1" text="1 Topic"/>
+											</items>
+										</Select>
+										<Button icon="sap-icon://refresh" press="refreshTopics" tooltip="Refresh"/>
+										<CheckBox text="leere Topic-Einträge anzeigen" selected="false" id="check" select="refreshTopics"/>
+									</items>
+								</HBox>
+							</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
+						<sap.ui.layout:Grid id="grid0" defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
+							<sap.ui.layout:content>
+								<Text id="name0"/>
+								<TextArea id="playlist0" rows="3" cols="50" width="120pt"/>
+							</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
+						<sap.ui.layout:Grid id="grid1" defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
+							<sap.ui.layout:content>
+								<Text id="name1"/>
+								<TextArea id="playlist1" rows="3" cols="50" width="120pt"/>
+							</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
+						<sap.ui.layout:Grid id="grid2" defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
+							<sap.ui.layout:content>
+								<Text id="name2"/>
+								<TextArea id="playlist2" rows="3" cols="50" width="120pt"/>
+							</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
+						<sap.ui.layout:Grid id="grid3" defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
+							<sap.ui.layout:content>
+								<Text id="name3"/>
+								<TextArea id="playlist3" rows="3" cols="50" width="120pt"/>
+							</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
+						<sap.ui.layout:Grid id="grid4" defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
+							<sap.ui.layout:content>
+								<Text id="name4"/>
+								<TextArea id="playlist4" rows="3" cols="50" width="120pt"/>
+							</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
+						<sap.ui.layout:Grid id="grid5" defaultSpan="XL1 L1 M2 S4" defaultIndent="XL1 L1 M1 S1">
+							<sap.ui.layout:content>
+								<Text id="name5"/>
+								<TextArea id="playlist5" rows="3" cols="50" width="120pt"/>
+							</sap.ui.layout:content>
+						</sap.ui.layout:Grid>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>
